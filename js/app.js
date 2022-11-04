@@ -21,6 +21,19 @@ createApp({
             ]
         }
     },
+    methods: {
+        toggleIt(index){
+            this.tasks[index].done= !this.tasks[index].done;
+        },
+        remove(index){
+            this.noString = '';
+            if(this.tasks[index].done){
+                this.tasks.splice(index,1);
+            }else{
+             this.noString = 'Completare il task prima di cancellarlo'
+            }
+        }
+    },
     mounted(){
         console.log('hi!')
     }
