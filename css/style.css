@@ -56,3 +56,7 @@ input, button{
 .task:hover {
     background-color: yellowgreen;
 }
+
+.task.done span {
+    text-decoration: line-through;
+}
